@@ -15,6 +15,14 @@ vagrant up
 
 Make sure you have version v20160921.0.0 or higher of the ubuntu/xenial64 vagrant box.
 
+For some reason elasticsearch seems to sometimes simply not start. You can start it using:
+
+```
+vagrant ssh
+sudo su -
+systemctl start elasticsearch
+```
+
 # usage
 
 To start the bionet app:
@@ -22,7 +30,7 @@ To start the bionet app:
 ```
 vagrant ssh
 cd bionet-new/
-npm run start
+npm start
 ```
 
 See [bionet-new](https://github.com/biobricks/bionet-new) readme for how to use the bionet server.

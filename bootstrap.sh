@@ -34,4 +34,6 @@ mv ncbi-blast-2.6.0+/bin/* /usr/local/bin/
 
 # fetch bionet and dependencies
 su -l ubuntu -c "git clone https://github.com/biobricks/bionet-new"
+su -l ubuntu -c "cd bionet-new/ && cp settings.js.example settings.js"
 su -l ubuntu -c "cd bionet-new/ && npm install"
+su -l ubuntu -c "cd bionet-new/labdevice/ && ssh-keygen -t rsa -f hostkey -N \"\""
